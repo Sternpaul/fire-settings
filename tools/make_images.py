@@ -1,4 +1,8 @@
-"""Generate the launcher icon (96x96) and TV banner (320x180): a white gear on a dark blue tile."""
+"""Generate the launcher icon (96x96) and TV banner (320x180): a white gear on a dark blue tile.
+
+Usage: python3 tools/make_images.py res/drawable-xhdpi [docs]
+The optional second directory gets a 3x banner for the README.
+"""
 import math, sys
 from PIL import Image, ImageDraw, ImageFont
 
@@ -40,3 +44,5 @@ def banner(d, W, H):
 out = sys.argv[1]
 render(96, 96, icon).save(f"{out}/icon.png", optimize=True)
 render(320, 180, banner).save(f"{out}/banner.png", optimize=True)
+if len(sys.argv) > 2:
+    render(960, 540, banner).save(f"{sys.argv[2]}/banner.png", optimize=True)
