@@ -1,4 +1,44 @@
+# Build output
 out/
+bin/
+gen/
+build/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.idsig
+
+# Signing keys: never commit these
 keystore/
 *.jks
 *.keystore
+*.p12
+*.pem
+*.key
+signing.properties
+local.properties
+
+# Gradle / Android Studio (in case someone opens it there)
+.gradle/
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Editors
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
